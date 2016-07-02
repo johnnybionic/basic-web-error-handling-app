@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Error Handling Demo</title>
+	
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    
+ 	<!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"/> 
+
+    <!-- Custom styles for this template -->
+    <link href="/css/starter-template.css" rel="stylesheet" />
+
+</head>
+<body>
+
+	<div class="container">
+	
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Error handling with Spring Boot</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	
+		<nav class="navbar navbar-default">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" href="/">Error Handling</a>
+		        </div>
+		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+		            <p class="navbar-text navbar-right">Signed in as <a href="/index" class="navbar-link">Guest User</a></p>
+		        </div>
+		    </div>
+		</nav>
+		
+		<h2>Error Handler</h2>
+		
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<td>Key</td>
+					<td>Value</td> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>TimeStamp</td>
+					<td th:text="${timestamp}"></td>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td th:text="${status}"></td>
+				</tr>
+				<tr>
+					<td>Message</td>
+					<td th:text="${message}"></td>
+				</tr>
+				<tr>
+					<td>Error</td>
+					<td th:text="${error}"></td>
+				</tr>
+				<tr>
+					<td>Path</td>
+					<td th:text="${path}"></td>
+				</tr>																
+			</tbody>
+		</table>
+	
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymleaf.org">
+<head>
+<!--  this page is used instead of the whitelabel page -->
+</head>
+<body>
+	<h1>Ooops!</h1>
+	<h3 >Default error page</h3>
+
+	<!-- these get set to default values -->
+		<p th:text="${error}">error</p>
+		<p th:text="${message}">message</p>			
+</body>
+</html>
